@@ -14,6 +14,8 @@ int yywrap(void)
 "*" return MUL;
 "/" return DIV;
 "\n" return CR;
+"(" return LP;
+")" return RP;
 ([1-9][0-9]*)|0|([0-9]+\.[0-9]+) {
 	double tmp;
 	sscanf(yytext,"%lf",&tmp);

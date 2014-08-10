@@ -8,7 +8,7 @@
 	double double_value;
 }
 %token <double_value> DOUBLE_LITERAL
-%token ADD SUB MUL DIV CR
+%token ADD SUB MUL DIV CR LP RP
 %type <double_value> exp term pri_exp
 %%
 line_list
@@ -45,6 +45,10 @@ term
 	;
 pri_exp
 	: DOUBLE_LITERAL
+	| LP exp RP
+	{
+ 	$$ = $2;
+	}
 	;
 %%
 
