@@ -1,0 +1,23 @@
+
+a = 1
+b = 3.0202
+c = "string"
+
+func add(a,b)
+	a+b
+end
+
+if a == 1
+	doA()
+elseif a == 2
+	doB()
+else
+	doC()
+end
+
+while a == 1
+	doD();
+	d = "a"
+	d + c
+	a + c
+end
